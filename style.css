@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color:white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.main {
+    max-width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(37 69 54);
+    padding: 1.5rem;
+}
+
+
+.main-contact {
+    max-width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(37 69 54);
+    padding: 1.5rem;
+}
+
+.main-index {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;   
+    text-align: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    color: rgb(37 69 54);
+    padding: 1.5rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;  
+    color: white;
+    background-color: rgb(37 69 54);
+    width: 100vw;
+    padding: 1rem;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icoanecontact{
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    color: black;
+}
+ 
+.phonenr{
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+.img {
+    max-width: 45%;
+    max-height: auto;
+}
+
+ul {
+    text-align: left;
+}
+
+.lista {
+    text-align: center;
+}
+
+#hamburgerMenu{
+
+    display: none;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 0 2rem 0rem;
+    background-color:rgb(37 69 54);
+    width: 100vw;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.infocontact {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: flex-start;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;    
+    padding: 0.2rem;
+}
+
+.form-group { 
+    display: grid;
+    resize: none;
+    padding: 1rem;
+
+}
+
+footer {
+    background-color: rgb(37 69 54);
+    text-align: center;
+    color: white;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+
+    .wide-header{
+        display: none;
+    }
+    .narrow-header {
+        display: block;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 500px) {
+
+    .wide-header{
+        display: block;
+    }
+    .narrow-header {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 650px) {
+   
+    .main {
+        gap: 2rem;
+        padding: 2rem 1.5rem 2rem 1.5rem;
+        font-size: 1.3rem;
+        justify-items: center;
+       }
+   
+    .logo {
+        gap: 5rem;
+    }
+
+    .lista-locatie {
+        display: grid;
+        justify-items: center;
+        padding: 0.5rem;
+    }
+
+    .main-contact {
+        display: grid;
+        padding: 1.5rem;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+    }
+
+
+    .main-index {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(6, auto);
+        gap: 1.7rem;
+        align-items: center;
+        font-size: 1.3rem;
+
+    }
+
+    h1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .pozacuplu {
+        grid-column: 2 / 3;
+    }
+
+    .ipad {
+        grid-column: 2 / 3;
+        grid-row: 5 / span 2;
+
+    }
+
+    .text4 {
+        grid-column: 1 / 2;
+    }
+
+    .nav {
+        gap: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .phone {
+        font-size: 1.5rem;
+        padding: 1rem;
+        justify-content: center;
+    }
+    
+    .icons {
+        font-size: 1.5rem;
+    }
+
+    .infocontact {
+        gap: 2rem;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+
+    .material-icons {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        text-align: center;
+        align-items: stretch;
+
+    } 
+
+    .galerie {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(6, 2fr);
+        gap: 0.5rem;
+    }
+}
+
+
+@media (min-width: 1000px) {
+   
+    .exterior{
+        max-width: 45%;
+    }
+
+    .main-contact{
+        justify-items: center;
+    }
+
+    .img{
+        max-width: 35%;
+    }
+
+    .nav {
+        gap: 7rem;
+    }
+
+    .ipad {
+        grid-row: 5 / span 2;
+    }
+    .text5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+}
+
+
+@media (min-width: 1300px) {
+
+    .logo {
+        gap: 15rem;
+    }
+
+    .main-index {
+        grid-template-rows: auto;
+    }
+
+    p{
+        font-size: 1.9rem;
+    }
+
+    .pozacuplu {
+        grid-row: 3 span;
+    }
+
+    .icons {
+        grid-column: 1 / 2;
+    }
+
+    .ipad {
+        grid-row: 2 span;
+    }
+
+    .text4 {
+        grid-row: 6 / 7;
+    }
+
+    .text5 {
+        grid-column: 1 / 2 ;
+        grid-row: 7 / 8 ;
+    }
+}
+
+
