@@ -19,14 +19,15 @@ body {
 }
 
 .main {
-    max-width: 100%;   
+    max-width: 90rem;   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     color: rgb(37 69 54);
-    padding: 1.5rem;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    margin-inline: auto;
 }
 
 
@@ -38,7 +39,7 @@ body {
     align-items: center;
     gap: 1rem;
     color: rgb(37 69 54);
-    padding: 1.5rem;
+    padding: 0rem 1.5rem;
 }
 
 .main-index {
@@ -50,6 +51,15 @@ body {
     gap: 1.5rem;
     color: rgb(37 69 54);
     padding: 1.5rem;
+}
+
+.hamburger {
+    padding: 2rem;
+}
+
+.closeIcon {
+    display: none;
+
 }
 
 .title {
@@ -109,7 +119,8 @@ ul {
     text-align: left;
 }
 
-.lista {
+.lista,
+h1 {
     text-align: center;
 }
 
@@ -144,7 +155,9 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
 }
+
 
 .infocontact {
     display: inline-flex;
@@ -157,16 +170,40 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.2rem;    
-    padding: 0.2rem;
+    gap: 1rem;    
+    padding: 1rem;
 }
 
 .form-group { 
     display: grid;
     resize: none;
+    font-size: 1.5rem;
     padding: 1rem;
 
 }
+
+
+
+.form-group input,
+.form-group textarea {
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    resize: none;
+
+}
+
+.checkbox { 
+    display: grid;
+    padding: 1rem;
+    justify-items: start
+
+}
+
+input [type="checkbox"] {
+    appearance: none;
+}
+
 
 footer {
     background-color: rgb(37 69 54);
@@ -174,6 +211,24 @@ footer {
     color: white;
     padding: 2rem 0 2rem 0;
     width: 100%;
+}
+
+#backToTop {
+    position: sticky;
+    width: 1.5rem;
+    height: 1rem;
+    background-color: rgb(102, 129, 114);
+    z-index: 999999;
+    border-radius: 0.2rem;
+    bottom: 0px;
+    margin-top: -1rem;
+    float: right;
+    margin-right: 2rem;
+    display: none;
+}
+
+.material-icons-arrow {
+    margin-top: -1rem;
 }
 
 @media (max-width: 500px) {
@@ -209,7 +264,7 @@ footer {
    
     .main {
         gap: 2rem;
-        padding: 2rem 1.5rem 2rem 1.5rem;
+        padding: 0rem 1.5rem 2rem 1.5rem;
         font-size: 1.3rem;
         justify-items: center;
        }
@@ -226,7 +281,7 @@ footer {
 
     .main-contact {
         display: grid;
-        padding: 1.5rem;
+        padding: 0rem 1.5rem;
         row-gap: 0.5rem;
         column-gap: 0.5rem;
     }
@@ -253,11 +308,12 @@ footer {
 
     .ipad {
         grid-column: 2 / 3;
-        grid-row: 5 / span 2;
+        grid-row: 4 / span 2;
 
     }
 
-    .text4 {
+    .text4,
+    .text5 {
         grid-column: 1 / 2;
     }
 
@@ -276,10 +332,16 @@ footer {
         font-size: 1.5rem;
     }
 
-    .infocontact {
+    .infocontact, 
+    .contact {
         gap: 2rem;
         justify-content: center;
         font-size: 1.3rem;
+    }
+
+    .map {
+        display: flex;
+        flex-direction: column;
     }
 
     .material-icons {
@@ -303,11 +365,11 @@ footer {
 
 @media (min-width: 1000px) {
    
-    .exterior{
+    .exterior {
         max-width: 45%;
     }
 
-    .main-contact{
+    .main-contact {
         justify-items: center;
     }
 
@@ -319,9 +381,11 @@ footer {
         gap: 7rem;
     }
 
-    .ipad {
-        grid-row: 5 / span 2;
+    .galerie {
+        grid-template-columns: 2fr 2fr 2fr;
+      
     }
+
     .text5 {
         grid-column: 1 / 2;
         grid-row: 5 / 6;
@@ -340,7 +404,7 @@ footer {
         grid-template-rows: auto;
     }
 
-    p{
+    p {
         font-size: 1.9rem;
     }
 
@@ -357,13 +421,12 @@ footer {
     }
 
     .text4 {
-        grid-row: 6 / 7;
+        grid-row: 5 / 6;
     }
 
     .text5 {
         grid-column: 1 / 2 ;
-        grid-row: 7 / 8 ;
+        grid-row: 6 / 7 ;
     }
+
 }
-
-

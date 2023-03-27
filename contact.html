@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="style.css"> </link> 
+    <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
-    <script src="form.js"></script>
+    <script src="script.js"></script>
 
 </head>
 
@@ -37,7 +37,7 @@
             <img class="img" src="poze/logo.jpeg"
                  alt="Casa Boemia Logo">
             <div class="phone">
-                <i class="material-icons" onclick="toggleMenu()">menu</i>
+                <i class="material-icons" id="hamburgerIcon">menu</i>
             </div>
         </div>
         <nav class="nav" id="hamburgerMenu">
@@ -65,48 +65,46 @@
                 <a class="phonenr" href="https://www.facebook.com/people/Casa-Boemia-Giroc/100085536936785/">Casa Boemia Giroc</a>
             </div>
         </div>
-        <img src="poze/exterior.jpg" alt="Casa Boemia Exterior" class="exterior">
+        <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.643525431768!2d21.23450921541553!3d45.718187779104845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d8a85589fb7%3A0x7a378112cc8d8ff!2sCasa%20Boemia%20Giroc!5e0!3m2!1sro!2sro!4v1679916961745!5m2!1sro!2sro" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+        </div>
     </div>
     <div class="form">
-    <h2>Contact</h2>
+    <h2>Programează o vizită</h2>
     <p> Vă invităm să ne vizitați, pentru a ne cunoaște și pentru a experimenta direct stilul de viață de la Casa Boemia. Completați formularul de mai jos și vă vom contacta în cel mai scurt timp pentru a programa vizionarea.</p>
     </div>
-    <form id="the-form">
-        <label class="form-group">
-            Nume:
-            <input type="text"  
-                    name="name"
-                    minlength="2"
-                    required
-            />
-            Telefon:
-            <input type="number"
-                    name="phone"
-                    minlength="10"
-                    required
-            />
-            Email:
-            <input type="email"
-                    name="email"
-                    required
-            />
-            Mesaj:
-            <input type="text"  
-                    name="mesaj"       
-            />
 
-            Am citit Politica de confidențialitate și sunt de acord cu procesarea datelor personale:
-            <input type="checkbox"
-                    name="accept"
-                    required
-            />
+
+    <form name="contact"  id="the-form" method="post" netlify>
+        <label class="form-group">Nume: <input 
+            type="text" 
+            name="name" />
         </label>
+        <label class="form-group">Telefon: <input 
+            type="number" 
+            name="phone"  
+            minlength="10" />
+        </label>
+        <label class="form-group">Email: <input 
+            type="email" 
+            name="email" />
+        </label>
+        <label class="form-group">Mesaj: 
+            <textarea></textarea>
+        </label>
+        <label class="checkbox"> <input 
+        type="checkbox" 
+        name="accept" />
+        Am citit Politica de confidențialitate și sunt de acord cu procesarea datelor personale. </label>
         <div class="form-group">
-            <button type="submit">Trimite</button>
-        </div>
+        <button type="submit">Trimite</button> </div>
     </form>
+    </div>
     <footer class="description"> 
         Casa Boemia Giroc &copy; 2023. <br>Toate drepturile sunt rezervate.
     </footer>
+    <div id="backToTop">
+        <i class="material-icons">arrow_upward</i>
+    </div>
 </body>
 </html>
