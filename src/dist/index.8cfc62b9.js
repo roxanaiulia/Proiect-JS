@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"dmSKG":[function(require,module,exports) {
+})({"ecctg":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "8f9be3f7e1ae9c94";
+module.bundle.HMR_BUNDLE_ID = "b3c595598cfc62b9";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,8 +556,39 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"lHVYI":[function(require,module,exports) {
+},{}],"6rimH":[function(require,module,exports) {
+function setHamburgerMenu() {
+    const icon = document.getElementById("hamburgerIcon");
+    const x = document.getElementById("hamburgerMenu");
+    icon.addEventListener("click", ()=>{
+        if (x.style.display === "flex") x.style.display = "none";
+        else x.style.display = "flex";
+    });
+}
+function setBackToTopButton() {
+    const button = document.getElementById("backToTop");
+    document.addEventListener("scroll", ()=>{
+        if (document.documentElement.scrollTop == 0) button.style.display = "none";
+        else button.style.display = "block";
+    });
+    button.addEventListener("click", ()=>{
+        // document.documentElement.scrollTop = 0;
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+window.onload = function() {
+    setHamburgerMenu();
+    setBackToTopButton();
+};
+const form = document.getElementById("the-form");
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    console.log(event.currentTarget);
+});
 
-},{}]},["dmSKG","lHVYI"], "lHVYI", "parcelRequire94c2")
+},{}]},["ecctg","6rimH"], "6rimH", "parcelRequire94c2")
 
-//# sourceMappingURL=Galerie.e1ae9c94.js.map
+//# sourceMappingURL=index.8cfc62b9.js.map
