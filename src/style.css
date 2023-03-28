@@ -67,7 +67,6 @@ body {
     justify-content: center;  
     color: white;
     background-color: rgb(37 69 54);
-    width: 100vw;
     padding: 1rem;
 }
 
@@ -76,6 +75,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .icoanecontact{
@@ -135,7 +135,6 @@ h1 {
     justify-content: center;
     padding: 2rem 0 2rem 0rem;
     background-color:rgb(37 69 54);
-    width: 100vw;
 }
 
 .nav-link {
@@ -166,26 +165,37 @@ h1 {
     align-items: flex-start;
 }
 
+.map {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;    
     padding: 1rem;
+    text-align: center;
 }
 
 .form-group { 
-    display: grid;
+    display: flex;
+    flex-direction: column;
     resize: none;
     font-size: 1.5rem;
     padding: 1rem;
-
+    align-content: space-around;
+    width: 100%;
 }
 
 
 
 .form-group input,
 .form-group textarea {
+    display: flex;
     border: 1px solid gray;
     border-radius: 0.25rem;
     padding: 0.5rem;
@@ -204,7 +214,6 @@ input [type="checkbox"] {
     appearance: none;
 }
 
-
 footer {
     background-color: rgb(37 69 54);
     text-align: center;
@@ -215,21 +224,23 @@ footer {
 
 #backToTop {
     position: sticky;
-    width: 1.5rem;
-    height: 1rem;
     background-color: rgb(102, 129, 114);
     z-index: 999999;
     border-radius: 0.2rem;
     bottom: 0px;
-    margin-top: -1rem;
+    margin-top: -2.8rem;
     float: right;
     margin-right: 2rem;
     display: none;
+    text-align: center;
+    font-size: 2.3rem;
 }
 
-.material-icons-arrow {
-    margin-top: -1rem;
+#backToTop:hover {
+    cursor: pointer;
+    background-color: rgba(102, 129, 114, 0.8);
 }
+
 
 @media (max-width: 500px) {
 
@@ -242,6 +253,10 @@ footer {
 
     .nav {
         flex-direction: column;
+    }
+
+    #backToTop {
+        width: 2rem;
     }
 }
 
@@ -257,7 +272,12 @@ footer {
     .nav {
         flex-direction: row;
     }
+
+    .main-contact {
+        align-items: stretch;
+    }
 }
+
 
 
 @media (min-width: 650px) {
@@ -278,14 +298,6 @@ footer {
         justify-items: center;
         padding: 0.5rem;
     }
-
-    .main-contact {
-        display: grid;
-        padding: 0rem 1.5rem;
-        row-gap: 0.5rem;
-        column-gap: 0.5rem;
-    }
-
 
     .main-index {
         display: grid;
@@ -340,8 +352,7 @@ footer {
     }
 
     .map {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .material-icons {
@@ -360,8 +371,46 @@ footer {
         grid-template-rows: repeat(6, 2fr);
         gap: 0.5rem;
     }
+
+    #backToTop {
+        font-size: 1.3rem;
+    }
 }
 
+@media (min-width: 700px) {
+    .main-contact {
+        flex-direction: row;
+        padding: 1.5rem;
+        gap: 0.5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    #backToTop { 
+        font-size: 1.2rem;
+    }
+
+    .form-container {
+        max-width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .form-row {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .form-button {
+        width: 30%;
+        height: 2rem;
+    }
+}
 
 @media (min-width: 1000px) {
    
@@ -370,7 +419,8 @@ footer {
     }
 
     .main-contact {
-        justify-items: center;
+        padding: 1.5rem;
+        justify-content: space-around;
     }
 
     .img{
@@ -390,6 +440,16 @@ footer {
         grid-column: 1 / 2;
         grid-row: 5 / 6;
     }
+    
+    .contact-main {
+        padding: 2rem;
+        
+    }
+
+    iframe { 
+        min-width: 50vw;
+    }
+    
 
 }
 
@@ -429,4 +489,13 @@ footer {
         grid-row: 6 / 7 ;
     }
 
+    .map {
+        height: 30vw;
+    }
+}
+
+@media (min-width: 2560px) {
+    .map {
+        height: 20vw;
+    }
 }

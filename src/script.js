@@ -15,14 +15,13 @@ function setBackToTopButton() {
   const button = document.getElementById("backToTop");
 
   document.addEventListener("scroll", () => {
-    if(document.documentElement.scrollTop == 0)
+    if(document.documentElement.scrollTop < 300)
       button.style.display = "none";
     else
       button.style.display = "block";
   })
 
   button.addEventListener("click", () => {
-    // document.documentElement.scrollTop = 0;
     window.scrollTo({top: 0, behavior: 'smooth'});
   })
 }
@@ -31,13 +30,3 @@ window.onload = function() {
   setHamburgerMenu();
   setBackToTopButton();
 };
-
-
-//   const form = document.getElementById("the-form");
-
-// form.addEventListener ("submit", (event) => {
-
-//     event.preventDefault();
-
-//     console.log(event.currentTarget);
-// });
